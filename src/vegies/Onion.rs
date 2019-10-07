@@ -1,5 +1,5 @@
-use crate::storage::*;
+use crate::fridge;
 
 pub fn chop() {
-    Fridge::store_veggies();
+    fridge::store_veggies();
 }

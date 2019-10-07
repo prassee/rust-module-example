@@ -1,6 +1,6 @@
+mod fridge;
 mod fruits;
 mod publik;
-mod storage;
 mod vegies;
 
 use fruits::Mango;

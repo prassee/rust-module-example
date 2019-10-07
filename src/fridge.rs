@@ -1,4 +1,3 @@
-
 pub fn store_fruits() {
 }
 
