@@ -1,10 +1,10 @@
-mod Fruits;
-mod Storage;
-mod Vegies;
+mod fruits;
 mod publik;
+mod storage;
+mod vegies;
 
-use Fruits::Mango;
-use Vegies::Onion;
+use fruits::Mango;
+use vegies::Onion;
 
 pub fn mangonion() {
     Mango::ripen();
