@@ -1,6 +1,6 @@
 pub struct Entry {
-    pub date: String,
     pub description: String,
+    pub date: String,
     pub entry_type: EntryType,
     pub amount: f32,
 }
