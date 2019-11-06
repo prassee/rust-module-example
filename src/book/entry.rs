@@ -1,17 +1,22 @@
 pub struct Entry {
-    date: String,
-    description: String,
-    entry: EntryType,
-    amount: f32,
+    pub date: String,
+    pub description: String,
+    pub entry_type: EntryType,
+    pub amount: f32,
 }
 
 pub enum EntryType {
-    income,
-    expenditure,
+    Income,
+    Expenditure,
 }
 
 impl Entry {
-    pub fn from(date: String, description: String, entry: EntryType, amount: f32) -> Entry {
-        Entry(date, description, entry, amount)
+    pub fn from(date: String, description: String, entry_type: EntryType, amount: f32) -> Entry {
+        Entry {
+            date,
+            description,
+            entry_type,
+            amount,
+        }
     }
 }

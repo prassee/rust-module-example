@@ -6,14 +6,14 @@ pub struct AccountBook {
 
 impl AccountBook {
     pub fn from(entries: Vec<Entry>) -> AccountBook {
-        AccountBook(entries)
+        AccountBook { entries }
     }
-    pub fn findBalance(&self) -> f32 {
+    pub fn find_balance(&self) -> f32 {
         let mut bal = 0.0;
-        for ent in self.entries {
-            let amt = match ent.entry {
-                EntryType::income => ent.amount,
-                EntryType::expenditure => -ent.amount,
+        for ent in self.entries.iter() {
+            let amt = match ent.entry_type {
+                EntryType::Income => ent.amount,
+                EntryType::Expenditure => -ent.amount,
             };
             bal = amt + bal;
         }
